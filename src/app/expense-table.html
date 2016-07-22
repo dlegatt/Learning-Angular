@@ -1,0 +1,59 @@
+<div class="col-md-6 col-sm-6">
+    <div class="col-sm-6 col-md-6 col-lg-6">
+        <input
+                ng-if="vm.searchable"
+                type="text"
+                class="form-control pull-right"
+                ng-model="vm.searchBox"
+                placeholder="Search...">
+    </div>
+    <div class="col-sm-5 col-md-5 col-lg-5 col-sm-offset-1 col-lg-offset-1 col-md-offset-1">
+        <span class="col-sm-6"><label>Per Page:</label></span>
+        <span class="col-sm-6">
+            <select
+                class="form-control"
+                ng-model="vm.numPerPage"
+                ng-options="num for num in [5,15,25]">
+            </select>
+        </span>
+    </div>
+    <table class="table table-striped table-condensed">
+        <thead>
+            <tr>
+                <th ng-click="vm.sort='merchant';vm.order = !vm.order">
+                    Merchant
+                    <sort-icon column="merchant" sort="vm.sort" order="vm.order"></sort-icon>
+                </th>
+                <th ng-click="vm.sort='amount'; vm.order = !vm.order">
+                    Amount
+                    <sort-icon column="amount" sort="vm.sort" order="vm.order"></sort-icon>
+                </th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr expense
+                exp="e"
+                on-dec="vm.declare(e)"
+                on-del="vm.del(e)"
+                show-declare-btn="vm.declarative"
+                ng-repeat="e in vm.expenses | orderBy: vm.sort:vm.order |filter: vm.paginate">
+            </tr>
+        </tbody>
+    </table>
+
+    <ul uib-pagination
+        ng-if="vm.showPager()"
+        total-items="vm.search().length"
+        ng-model="vm.currentPage"
+        max-size="5"
+        boundary-links="true"
+        items-per-page="vm.numPerPage"
+        class="pagination-sm pull-right"
+        previous-text="&lsaquo;"
+        next-text="&rsaquo;"
+        first-text="&laquo;"
+        last-text="&raquo;"
+    >
+    </ul>
+</div>

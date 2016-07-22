@@ -1,21 +1,20 @@
 <tr>
     <td>{{vm.exp.merchant}}</td>
-    <td>{{vm.exp.amount}}</td>
+    <td>{{vm.exp.amount|currency}}</td>
     <td>
         <div ng-show="vm.showDeclareBtn">
             <button class="btn btn-xs" 
                 ng-class="{'btn-danger': vm.exp.isInGroupA,'btn-success': !vm.exp.isInGroupA}"
-                ng-click="vm.dec()">
+                ng-click="vm.onDec()">
                 <span class="glyphicon" 
                         ng-class="{'glyphicon-menu-down': vm.exp.isInGroupA,'glyphicon-menu-up':!vm.exp.isInGroupA}">
                 </span>
             </button>
         </div>
         <div ng-hide="vm.showDeclareBtn">
-            <span class="label" 
-                ng-class="{'label-success': vm.exp.isInGroupA,'label-danger': !vm.exp.isInGroupA}">
-                {{vm.exp.isInGroupA ? 'Declared':'Not Declared'}}
-            </span>
+            <button class="btn btn-xs btn-danger" ng-click="vm.onDel()" ng-disabled="vm.exp.isInGroupA">
+                X
+            </button>
         </div>
     </td>
 </tr>

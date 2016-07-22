@@ -1,0 +1,13 @@
+<div class="col-md-3 col-sm-3 pull-right">
+    <form ng-submit="vm.saveExpense()">
+        <label>Merchant: </label>
+        <input type="text" ng-model="vm.expense.merchant" class="form-control">
+        <br>
+        <label>Amount: </label>
+        <input type="text" class="form-control" ng-model="vm.expense.amount">
+        <hr>
+        <button class="btn btn-xs btn-primary" type="submit">
+            Save
+        </button>
+    </form>
+</div>

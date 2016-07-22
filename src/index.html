@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- build:css /css/lib.css-->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css /css/app.css -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- endbuild -->
+</head>
+<body ng-app="main">
+    <div ng-controller="MainController as vm">
+        <div class="container">
+            <h1>Declared Expenses</h1>
+            <hr>
+            <div class="row">
+                <expense-table expenses="vm.groupA" searchable="false"></expense-table>
+                <new-expense></new-expense>
+            </div>
+            <h1>Undeclared Expenses</h1>
+            <hr>
+            <div class="row">
+                <expense-table expenses="vm.groupB"></expense-table>
+            </div>
+            <h1>All Expenses</h1>
+            <hr>
+            <div class="row">
+                <expense-table expenses="vm.both" declarative="false"></expense-table>
+            </div>
+        </div>
+    </div>
+    <!-- build:js /js/lib.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js /js/app.js -->
+    <!-- inject:js -->
+    <script src="/src/app/app.js"></script>
+    <script src="/src/app/data.service.js"></script>
+    <script src="/src/app/expense.directive.js"></script>
+    <script src="/src/app/group-list.directive.js"></script>
+    <script src="/src/app/main.js"></script>
+    <script src="/src/app/new-expense.directive.js"></script>
+    <script src="/src/app/sort-icon.directive.js"></script>
+    <!-- endinject -->
+    <!-- inject:templates:js -->
+    <!-- endinject -->
+    <!-- endbuild -->
+</body>
+</html>

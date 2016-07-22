@@ -18,6 +18,16 @@
     "bootstrap": "^3.3.6",
     "angular": "angularjs#^1.5.7",
     "jquery": "^2.2.4",
-    "angular-animate": "^1.5.7"
+    "angular-animate": "^1.5.7",
+    "angular-bootstrap": "^2.0.0"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "less/bootstrap.less",
+        "dist/css/bootstrap.min.css",
+        "dist/js/bootstrap.js"
+      ]
+    }
   }
 }
