@@ -1,0 +1,24 @@
+{
+  "name": "Shaping Up",
+  "authors": [
+    "David Legatt <legattd@ncbpinc.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "angular": "angularjs#^1.5.7",
+    "jquery": "^3.1.0",
+    "animate.css": "^3.5.2",
+    "angular-animate": "^1.5.7"
+  }
+}

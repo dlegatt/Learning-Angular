@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+</head>
+<body ng-app="main">
+    <div ng-controller="MainController as vm">
+        <div class="container">
+            <h1>Declared Expenses</h1>
+            <hr>
+            <div class="row">
+                <expense-table expenses="vm.groupA"></expense-table>
+            </div>
+            <h1>Undeclared Expenses</h1>
+            <hr>
+            <div class="row">
+                <expense-table expenses="vm.groupB"></expense-table>
+            </div>
+            <h1>All Expenses</h1>
+            <hr>
+            <div class="row">
+                <expense-table expenses="vm.both" declarative="false"></expense-table>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
