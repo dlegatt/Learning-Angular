@@ -1,7 +1,7 @@
 {
-  "name": "Shaping Up",
+  "name": "Learning Angular",
   "authors": [
-    "David Legatt <legattd@ncbpinc.com>"
+    "David Legatt <dlegatt@gmail.com>"
   ],
   "description": "",
   "main": "",
@@ -17,8 +17,7 @@
   "dependencies": {
     "bootstrap": "^3.3.6",
     "angular": "angularjs#^1.5.7",
-    "jquery": "^3.1.0",
-    "animate.css": "^3.5.2",
+    "jquery": "^2.2.4",
     "angular-animate": "^1.5.7"
   }
 }
